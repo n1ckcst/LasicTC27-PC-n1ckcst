@@ -77,49 +77,49 @@
     </tr>
  </thead>
     <tr>
-      <th>placeholder</th>
+      <th>1 Foot</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
-      <th>placeholder</th>
+      <th><?php echo $inches_from_foot; ?> Inches</th>
+      <th>1 ft</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
+      <th><?php echo $inches_from_foot; ?> in</th>
     </tr>
   
   <tbody>
     <tr>
-     <th>placeholder</th>
+     <th>1 Yard</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
-      <th>placeholder</th>
+      <th><?php echo $feet_from_yard; ?> Feet</th>
+      <th>1 yd</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
+      <th><?php echo $feet_from_yard; ?> ft</th>
     </tr>
 
      <tr>
-     <th>placeholder</th>
+     <th>1 Chain</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
-      <th>placeholder</th>
+      <th><?php echo $yards_from_chain; ?> Yards</th>
+      <th>1 ch</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
+      <th><?php echo $yards_from_chain; ?> yd</th>
     </tr>
 
      <tr>
-     <th>placeholder</th>
+     <th>1 Furlong</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
-      <th>placeholder</th>
+      <th><?php echo $yards_from_furlong; ?> Yards (or 10 Chains)</th>
+      <th>1 fur</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
+      <th><?php echo $yards_from_furlong; ?> yd</th>
     </tr>
 
       <tr>
-     <th>placeholder</th>
+     <th>1 Mile</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
-      <th>placeholder</th>
-      <th style="text-align: center;">=</th>
-      <th>placeholder</th>
+      <th><?php echo $yards_from_mile; ?> Yards (or 8 Furlongs)</ th>
+      <th>1 mi</ th>
+      <th style="text-align: center;">=</ th>
+      <th><?php echo $yards_from_mile; ?> yd</ th>
     </tr>
   </tbody>
 </table>
