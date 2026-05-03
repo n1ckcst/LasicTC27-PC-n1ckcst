@@ -31,40 +31,40 @@
     </tr>
  </thead>
     <tr>
-      <th>placeholder</th>
+      <th>1 Centimeter</th>
     <th style="text-align: center;">=</th>
-      <th>placeholder</th>
-      <th>placeholder</th>
+      <th><?php echo $millimetre; ?> Millimeters</th>
+      <th>1 cm</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
+      <th><?php echo $millimetre; ?> mm</th>
     </tr>
   
   <tbody>
     <tr>
-     <th>placeholder</th>
+     <th>1 Decimeter</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
-      <th>placeholder</th>
+      <th><?php echo $centimetre_from_dm; ?> Centimeters</th>
+      <th>1 dm</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
+      <th><?php echo $centimetre_from_dm; ?> cm</th>
     </tr>
 
      <tr>
-     <th>placeholder</th>
+     <th>1 Meter</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
-      <th>placeholder</th>
+      <th><?php echo $centimetre_from_m; ?> Centimeters</th>
+      <th>1 m</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
+      <th><?php echo $centimetre_from_m; ?> cm</th>
     </tr>
 
      <tr>
-     <th>placeholder</th>
+     <th>1 Kilometer</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
-      <th>placeholder</th>
+      <th><?php echo $metre_from_km; ?> Meters</th>
+      <th>1 km</th>
       <th style="text-align: center;">=</th>
-      <th>placeholder</th>
+      <th><?php echo $metre_from_km; ?> m</th>
     </tr>
   </tbody>
 </table>
