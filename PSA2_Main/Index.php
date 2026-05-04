@@ -33,9 +33,8 @@
         </a>
     </div>
 
-    <!-- optional extra info or spacer -->
     <div style="margin-top: 2rem; text-align: center; font-size: 0.8rem; color: #2c5a7a;">
-        © 2026 Nick Shane S Lasic. 202410346 :)
+        © 2026 Nick Shane S Lasic. 202410346
     </div>
 </div>
 
