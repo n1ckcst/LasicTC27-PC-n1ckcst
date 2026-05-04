@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <title>Grade Ranking Program</title>
         
 </head>
@@ -17,7 +17,7 @@
         <div class="content">
             <form method="POST" action="">
                 <div class="form-group">
-                    <label>📝 Student Name:</label>
+                    <label>Student Name:</label>
                     <div class="name-row">
                         <input type="text" name="firstname" placeholder="First Name" required>
                         <input type="text" name="middlename" placeholder="MI.">
@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>📊 Grade:</label>
+                    <label>Grade:</label>
                     <input type="number" name="grade" placeholder="Enter grade (0-100)" step="1" min="0" max="100" required>
                 </div>
 

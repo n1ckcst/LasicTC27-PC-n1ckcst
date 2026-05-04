@@ -1,0 +1,42 @@
+body {
+    font-family: Arial;
+    background-color: #e6e9ed;
+}
+ 
+.container {
+    width: 340px;
+    margin: 100px auto;
+}
+ 
+.box {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #aaa;
+}
+ 
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+ 
+.link {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 8px 0;
+    background: #5c7cfa;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #4c6ef5;
+}
+ 
+.link:hover {
+    background: #4c6ef5;
+}
+ 
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+}

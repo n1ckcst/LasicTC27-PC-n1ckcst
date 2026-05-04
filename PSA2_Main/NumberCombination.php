@@ -2,14 +2,13 @@
 <html>
 <head>
     <title>Two-Digit Combinations</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
     <div class="container">
         <h2>Two-Digit Combinations (00 to 99)</h2>
         <div class="output">
             <?php
-            // Simple nested loop
             for ($i = 0; $i <= 9; $i++) {
                 for ($j = 0; $j <= 9; $j++) {
                     echo $i . $j;
