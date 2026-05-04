@@ -1,29 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>PSA2 - Main Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PSA2 - Main Page | Nick Shane S Lasic</title>
     <link rel="stylesheet" href="style.css">
-<h1>My Projects</h1>
-
+</head>
 <body>
 
-        <h2>PHP OPERATORS AND CONTROL STRUCTURE</h2>
-        <h3>Technical 2</h3>
-        <div class="container">
-            <div class="box">
-    <a href="MeasureConversionChart.php">Measure Conversion Chart</a><br>
-</div>
-<br>
-    <div class="box">
-    < text align center a href="GradeRankingProgram.php">Grade Ranking Program</a><br>
-</div>
-<br>
-    <div class="box">   
-    <a href="NumberCombination.php">Two-Digit Combinations</a><br>
-        </div>
-    </div>
-</body>
+<div class="main-card">
 
-<footer>
-    <p style="text-align: center;">&copy; 2024 Nick Shane S Lasic. All rights reserved.</p>
-</footer>
+    <h1>📁 By Nick Shane S Lasic</h1>
+    <div style="text-align: center; margin-top: -8px;">
+        <div class="decoration"></div>
+    </div>
+    <p style="text-align: center; margin: 0.5rem 0 0.8rem 0; color: #2a4b74; font-weight: 500;">Applications Development and Emerging Technologies</p>
+
+    
+    <div class="button-group">
+
+        <a href="MeasureConversionChart.php" class="project-btn">
+            <span>📏 Measure Conversion Chart</span>
+            <span class="btn-icon">➡️</span>
+        </a>
+        <a href="GradeRankingProgram.php" class="project-btn">
+            <span>🏆 Grade Ranking Program</span>
+            <span class="btn-icon">➡️</span>
+        </a>
+        <a href="NumberCombination.php" class="project-btn">
+            <span>🔢 Two-Digit Combinations</span>
+            <span class="btn-icon">➡️</span>
+        </a>
+    </div>
+
+    <!-- optional extra info or spacer -->
+    <div style="margin-top: 2rem; text-align: center; font-size: 0.8rem; color: #2c5a7a;">
+        © 2026 Nick Shane S Lasic. 202410346 :)
+    </div>
+</div>
+
+</body>
 </html>

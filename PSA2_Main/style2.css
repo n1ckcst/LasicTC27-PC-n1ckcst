@@ -6,107 +6,61 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0e0f17 0%, #764ba2 100%);
-    min-height: 100vh;
+    background: linear-gradient(145deg, #e9f0fc 0%, #d9e3f0 100%);
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
 }
 
 .container {
-    background: rgb(221, 193, 193);
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 750px;
     width: 100%;
-    max-width: 800px;
+    background: white;
+    border-radius: 2rem;
     overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e2a3a, #0f1724);
     color: white;
-    padding: 25px;
     text-align: center;
+    padding: 1.8rem;
 }
 
 .header h1 {
-    font-size: 28px;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.3rem;
+}
+
+.header p {
+    opacity: 0.8;
+    font-size: 0.9rem;
 }
 
 .content {
-    padding: 30px;
+    padding: 2rem;
+    background: #fefefe;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
-}
-
-input,
-select {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: all 0.3s;
-}
-
-input:focus,
-select:focus {
-    outline: none;
-    border-color: #1c254b;
-}
-
-.name-row {
-    display: grid;
-    grid-template-columns: 1fr 0.5fr 1fr;
-    gap: 15px;
-}
-
-.submit-btn {
-    width: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    padding: 14px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* RESULT CARD - Exactly as requested */
+/* result card styling (exactly matching your original look) */
 .result-card {
-    background: #f8f9fa;
-    border-radius: 15px;
-    padding: 25px;
-    margin-top: 30px;
-    border: 2px solid #e0e0e0;
-    animation: fadeIn 0.5s ease;
+    background: linear-gradient(145deg, #ffffff, #f8faff);
+    border-radius: 1.8rem;
+    padding: 1.8rem;
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: 0.2s;
 }
-
-
 
 .result-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1.5rem;
 }
 
 .result-info {
@@ -114,96 +68,169 @@ select:focus {
 }
 
 .result-info p {
-    font-size: 20px;
-    margin: 10px 0;
-    padding: 10px;
-    background: white;
-    border-radius: 10px;
+    font-size: 1.1rem;
+    margin: 0.7rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
-.result-info .name {
-    background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
-    font-weight: bold;
+/* NEW: make rank and grade appear side by side */
+.result-info p:nth-of-type(2),
+.result-info p:nth-of-type(3) {
+    display: inline-flex;
+    width: auto;
+    margin-right: 1rem;
 }
 
-.rank-box {
-    display: inline-block;
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 24px;
+/* alternative: create a flex row specifically for rank + grade */
+.result-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
+.result-info p {
+    margin: 0;
+}
+
+/* rank and grade on same row container */
+.result-info .rank-grade-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    align-items: center;
+    margin-top: 0.3rem;
+}
+
+/* style for individual rank/grade items inside the row */
+.result-info .rank-item,
+.result-info .grade-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* keep the name on its own line */
+.name {
+    font-weight: 700;
+    font-size: 1.3rem !important;
+    background: #f0f2ff;
+    padding: 0.3rem 1rem;
+    border-radius: 2rem;
+    display: inline-flex !important;
+    width: auto;
+    margin-bottom: 0.25rem;
+}
+
+.rank-box,
 .grade-box {
+    font-weight: 800;
+    padding: 0.25rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
     display: inline-block;
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 24px;
 }
 
 .picture-box {
     flex: 1;
     text-align: center;
+    background: #fafbff;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    border: 1px dashed #ccc;
 }
 
 .avatar {
-    width: 120px;
-    height: 120px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.avatar span {
-    font-size: 60px;
+    margin: 0 auto 0.6rem;
+    font-size: 2.6rem;
+    background: #e0e7ff;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1);
 }
 
 .picture-label {
-    margin-top: 10px;
-    font-size: 12px;
-    color: #666;
+    font-size: 0.75rem;
+    color: #5b6e8c;
+    font-weight: 500;
+}
+
+/* variable hint panel */
+.variable-panel {
+    background: #eef2ff;
+    border-radius: 1.2rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-left: 5px solid #2dd938;
+}
+
+.variable-label {
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 1.2rem;
+    background: #1e293b;
+    color: white;
+    padding: 0.3rem 0.9rem;
+    border-radius: 40px;
+}
+
+.code-block {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+.edit-note {
+    font-size: 0.8rem;
+    color: #2563eb;
+    font-weight: 500;
 }
 
 hr {
-    margin: 20px 0;
+    margin: 1.5rem 0;
     border: none;
-    height: 1px;
-    background: #e0e0e0;
+    height: 2px;
+    background: linear-gradient(90deg, #cbd5e1, transparent);
 }
 
-.grade-chart {
-    background: #f0f4f8;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-.grade-chart h3 {
+.footer-note {
     text-align: center;
-    margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 0.7rem;
+    color: #6c757d;
+    margin-top: 1rem;
 }
 
-.chart-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    font-size: 11px;
-}
+@media (max-width: 550px) {
+    .content {
+        padding: 1.2rem;
+    }
 
-.chart-item {
-    background: white;
-    padding: 5px;
-    border-radius: 5px;
-    text-align: center;
-}
+    .result-content {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.chart-letter {
-    font-weight: bold;
-    color: #667eea;
+    .result-info p {
+        justify-content: center;
+    }
+
+    /* keep rank and grade side by side on mobile */
+    .result-info .rank-grade-row {
+        justify-content: center;
+    }
 }
