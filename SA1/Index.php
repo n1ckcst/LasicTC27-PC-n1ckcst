@@ -10,7 +10,7 @@
 
 <div class="main-card">
     <h1>📁 Nick Shane S Lasic</h1>
-    <div class="subtitle">PSA2 - Main Page</div>
+    <div class="subtitle">TECHNICAL-SUMMATIVE ASSESSMENT 1</div>
     <div class="desc">Applications Development and Emerging Technologies</div>
     
     <div class="button-group">
