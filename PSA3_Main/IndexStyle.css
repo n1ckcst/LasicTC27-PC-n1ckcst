@@ -14,7 +14,6 @@ body {
     padding: 20px;
 }
 
-
 .main-card {
     max-width: 550px;
     width: 100%;
@@ -52,7 +51,6 @@ h1 {
     padding: 4px 12px;
 }
 
-
 .button-group {
     display: flex;
     flex-direction: column;
@@ -60,7 +58,6 @@ h1 {
     gap: 18px;
     margin: 20px 0 25px 0;
 }
-
 
 .project-btn {
     display: inline-flex;
@@ -78,20 +75,26 @@ h1 {
     cursor: pointer;
     transition: all 0.2s ease;
     box-shadow: 2px 2px 0 rgba(100, 70, 40, 0.15);
-
-
     width: 100%;
-    max-width: 320px;
-    min-width: 260px;
+    max-width: 340px;
+    min-width: 280px;
 }
 
+.project-btn span:first-child {
+    text-align: left;
+    flex: 1;
+}
+
+.project-btn span:last-child {
+    flex-shrink: 0;
+}
 
 @media (max-width: 480px) {
     .project-btn {
-        max-width: 280px;
-        min-width: 240px;
+        max-width: 300px;
+        min-width: 260px;
         padding: 10px 20px;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .main-card {
@@ -103,11 +106,10 @@ h1 {
     }
 }
 
-
 @media (min-width: 481px) and (max-width: 600px) {
     .project-btn {
-        max-width: 300px;
-        min-width: 260px;
+        max-width: 320px;
+        min-width: 280px;
     }
 }
 
@@ -120,11 +122,6 @@ h1 {
 .project-btn:active {
     transform: translate(1px, 1px);
     box-shadow: 1px 1px 0 rgba(100, 70, 40, 0.15);
-}
-
-.btn-icon {
-    font-size: 18px;
-    flex-shrink: 0;
 }
 
 .footer {
