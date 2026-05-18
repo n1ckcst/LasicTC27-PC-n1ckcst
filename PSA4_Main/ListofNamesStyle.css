@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', 'Lucida Sans Typewriter', monospace;
+    background: #f0ebe0;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.main-card {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fffef7;
+    border: 1px solid #ccc5b5;
+    padding: 2rem;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: normal;
+    color: #3a2c1f;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: #5a4a34;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #ddd0bc;
+    display: inline-block;
+    width: 100%;
+}
+
+.desc {
+    color: #2a4b74;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 10px 0 20px 0;
+    background: #f7f3ea;
+    display: inline-block;
+    padding: 4px 12px;
+    text-align: center;
+    width: auto;
+}
+
+.desc-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 13px;
+}
+
+th {
+    background: #e8dfd0;
+    color: #3a2c1f;
+    padding: 12px 8px;
+    text-align: left;
+    border: 1px solid #ccc5b5;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+td {
+    padding: 10px 8px;
+    border: 1px solid #ddd0bc;
+    color: #4a3a28;
+    font-family: 'Courier New', monospace;
+}
+
+tr:hover {
+    background: #f7f3ea;
+}
+
+.info-box {
+    margin-top: 30px;
+    padding: 18px;
+    background: #f7f3ea;
+    border: 1px solid #ddd0bc;
+}
+
+.info-box h3 {
+    color: #3a2c1f;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+}
+
+.info-box ul {
+    margin-left: 25px;
+    line-height: 1.8;
+    color: #5a4a34;
+    font-size: 12px;
+}
+
+.info-box li {
+    margin-bottom: 5px;
+}
+
+.footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2d8c8;
+    font-size: 11px;
+    color: #8b775a;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .main-card {
+        padding: 1.5rem;
+    }
+
+    table {
+        font-size: 11px;
+    }
+
+    th,
+    td {
+        padding: 8px 5px;
+    }
+}
+
+@media (max-width: 700px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
