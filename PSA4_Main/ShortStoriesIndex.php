@@ -11,7 +11,7 @@
         <h1>✦ SHORT STORIES ✦</h1>
         <div class="subtitle">a collection of 5 inspiring tales</div>
         
-        <!-- GRID: Story 1 to Story 5 with full content -->
+
         <div class="story-grid">
             <?php include 'story1.php'; ?>
             <?php include 'story2.php'; ?>
@@ -21,7 +21,7 @@
         </div>
         
         <div class="footer">
-            <?php echo date("Y"); ?> © Short Stories Collection
+            <?php echo date("Y"); ?> © Nick Shane Lasic | 202410346
         </div>
     </div>
 </body>
