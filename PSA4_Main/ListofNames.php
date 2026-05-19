@@ -9,7 +9,7 @@
 <body>
     <div class="main-card">
         <h1>✦ LIST OF NAMES ✦</h1>
-        <div class="subtitle">↯ 20 names processed using strlen() | ucfirst() | str_replace() | strpos() | strrev() ↯</div>
+        <div class="subtitle">↯ using strlen() | ucfirst() | str_replace() | strpos() | strrev() ↯</div>
 
 
         <?php
