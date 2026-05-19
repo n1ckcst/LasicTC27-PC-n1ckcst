@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', 'Lucida Sans Typewriter', monospace;
+    background: #f0ebe0;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+.main-card {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fffef7;
+    border: 1px solid #ccc5b5;
+    padding: 2rem 1.8rem;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #3a2c1f;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #5a4a34;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px dotted #ddd0bc;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto 15px;
+    padding-bottom: 8px;
+}
+
+.title-wrapper {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.badge {
+    background: #f7f3ea;
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 12px;
+    color: #2a4b74;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+th {
+    background: #e8dfd0;
+    color: #3a2c1f;
+    padding: 12px 8px;
+    border: 1px solid #b8a88a;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    padding: 10px 8px;
+    border: 1px solid #ddd0bc;
+    color: #3a2c1f;
+    vertical-align: top;
+}
+
+.fruit-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+tr:nth-child(even) {
+    background-color: #f7f3ea;
+}
+
+tr:hover {
+    background-color: #efe6d8;
+}
+
+.footer {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #e2d8c8;
+    font-size: 11px;
+    color: #8b775a;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #e8dfd0;
+    border: 1px solid #b8a88a;
+    padding: 10px 24px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3a2c1f;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 0 rgba(100, 70, 40, 0.15);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.back-btn:hover {
+    background: #ddd0bb;
+    transform: translate(-1px, -1px);
+}
+
+@media (max-width: 768px) {
+    .main-card {
+        padding: 1.5rem;
+        overflow-x: auto;
+    }
+
+    .fruit-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    td,
+    th {
+        font-size: 10px;
+        padding: 6px 4px;
+    }
+}
