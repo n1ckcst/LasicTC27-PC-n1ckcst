@@ -18,11 +18,11 @@
             <span>⟡ Using Arrays: Fruit Directory</span>
             <span>→</span>
         </a>
-        <a href="Number2Act.php" class="project-btn">
+        <a href="VolumeOfShapes.php" class="project-btn">
             <span>⟡ User Defined Functions: Volume of Shapes</span>
             <span>→</span>
         </a>
-        <a href="Number3Act.php" class="project-btn">
+        <a href="MainResume.php" class="project-btn">
             <span>⟡ Student Resume</span>
             <span>→</span>
         </a>

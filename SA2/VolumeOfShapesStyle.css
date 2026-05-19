@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #f0ebe0;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-card {
+    max-width: 900px;
+    width: 100%;
+    background: #fffef7;
+    border: 1px solid #ccc5b5;
+    padding: 2rem;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 24px;
+    color: #3a2c1f;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #5a4a34;
+    text-align: center;
+    border-bottom: 1px dotted #ddd0bc;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto 20px;
+    padding-bottom: 5px;
+}
+
+.title-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.badge {
+    background: #f7f3ea;
+    padding: 4px 12px;
+    font-size: 12px;
+    color: #2a4b74;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th,
+td {
+    border: 1px solid #b8a88a;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #e8dfd0;
+    color: #3a2c1f;
+}
+
+td:first-child {
+    font-weight: bold;
+    background: #f7f3ea;
+    width: 20%;
+}
+
+td:nth-child(2) {
+    font-family: monospace;
+    background: #fffef7;
+    width: 25%;
+}
+
+td:nth-child(3) {
+    font-family: monospace;
+    background: #fafaf5;
+    width: 30%;
+}
+
+td:last-child {
+    font-family: monospace;
+    color: #2a4b74;
+    font-weight: bold;
+    width: 25%;
+}
+
+.footer {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid #e2d8c8;
+    font-size: 11px;
+    text-align: center;
+    color: #8b775a;
+}
+
+.back-btn {
+    background: #e8dfd0;
+    border: 1px solid #b8a88a;
+    padding: 8px 20px;
+    font-family: monospace;
+    font-weight: bold;
+    color: #3a2c1f;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background: #ddd0bb;
+    transform: translate(-1px, -1px);
+}
+
+@media (max-width: 700px) {
+
+    td,
+    th {
+        font-size: 11px;
+        padding: 6px;
+    }
+
+    .main-card {
+        padding: 1rem;
+    }
+}

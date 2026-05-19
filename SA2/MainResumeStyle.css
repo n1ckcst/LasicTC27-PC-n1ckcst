@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', 'Lucida Sans Typewriter', monospace;
+    background: #f0ebe0;
+    padding: 30px 20px;
+    min-height: 100vh;
+}
+
+.resume-card {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fffef7;
+    border: 1px solid #ccc5b5;
+    padding: 2rem;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* BACK BUTTON */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #e8dfd0;
+    border: 1px solid #b8a88a;
+    padding: 8px 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3a2c1f;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 0 rgba(100, 70, 40, 0.15);
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.back-btn:hover {
+    background: #ddd0bb;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 rgba(100, 70, 40, 0.2);
+}
+
+/* ROW 1: PHOTO + PERSONAL INFO SIDE BY SIDE */
+.top-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+    align-items: start;
+}
+
+/* PHOTO COLUMN */
+.photo-column {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 50%;
+    border: 3px solid #b8a88a;
+    object-fit: cover;
+}
+
+.photo-caption {
+    color: #5a4a34;
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+/* PERSONAL INFO COLUMN */
+.personal-column {
+    background: #fffef7;
+    border: 1px solid #ddd0bc;
+    padding: 16px 20px;
+}
+
+.personal-column h2 {
+    color: #5a4a34;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px dotted #e2d8c8;
+    letter-spacing: 1px;
+}
+
+.personal-column p {
+    line-height: 1.6;
+    color: #3a2c1f;
+    font-size: 13px;
+}
+
+/* SECTION STYLES (for all other rows) */
+.section {
+    background: #fffef7;
+    border: 1px solid #ddd0bc;
+    padding: 16px 20px;
+    margin-bottom: 18px;
+    transition: all 0.2s ease;
+}
+
+.section:hover {
+    border-color: #b8a88a;
+    box-shadow: 3px 3px 0 rgba(100, 70, 40, 0.08);
+}
+
+.section h2 {
+    color: #5a4a34;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px dotted #e2d8c8;
+    letter-spacing: 1px;
+}
+
+.section p,
+.section ul {
+    margin-left: 15px;
+    line-height: 1.5;
+    color: #3a2c1f;
+    font-size: 13px;
+}
+
+.section ul {
+    list-style-type: square;
+    margin-top: 5px;
+}
+
+.section li {
+    margin-bottom: 6px;
+}
+
+/* Name Header */
+.name-header h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #3a2c1f;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    color: #5a4a34;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #e2d8c8;
+    font-size: 11px;
+    color: #8b775a;
+    text-align: center;
+}
+
+/* Responsive: Stack on mobile */
+@media (max-width: 600px) {
+    .top-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin: 0 auto;
+    }
+
+    .resume-card {
+        padding: 1.2rem;
+    }
+
+    .section h2 {
+        font-size: 15px;
+    }
+}
