@@ -1,12 +1,24 @@
 <?php
-if(isset($_POST['submit'])) {
-    $firstname = $_POST['firstname'];
-    $middlename = $_POST['middlename'];
-    $lastname = $_POST['lastname'];
+
+if (!isset($_COOKIE['firstname']) && 
+    !isset($_COOKIE['middlename']) && 
+    !isset($_COOKIE['lastname']) && 
+    !isset($_COOKIE['cookie_started'])) {
     
-    setcookie("firstname", $firstname, time()+10);
-    setcookie("middlename", $middlename, time()+20);
-    setcookie("lastname", $lastname, time()+30);
+    setcookie("firstname", "Nick Shane", time() + 10);
+    setcookie("middlename", "Shane", time() + 20);
+    setcookie("lastname", "Lasic", time() + 30);
+    setcookie("cookie_started", time(), time() + 30);
+    
+
+    header("Location: Personal_Info_Cookies.php");
+    exit();
+}
+
+
+$elapsed = 0;
+if (isset($_COOKIE['cookie_started'])) {
+    $elapsed = time() - $_COOKIE['cookie_started'];
 }
 ?>
 
@@ -15,29 +27,77 @@ if(isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Using Cookies - Personal Info</title>
+    <meta http-equiv="refresh" content="1">
+    <title>Personal Info - Cookies</title>
     <link rel="stylesheet" href="IndexStyle.css">
     <style>
-        .submit-btn {
+        .cookie-slot {
+            background: #f7f3ea;
+            border: 1px solid #b8a88a;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 3px 3px 0 rgba(100, 70, 40, 0.1);
+        }
+        .cookie-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #3a2c1f;
+            margin-bottom: 15px;
+            border-bottom: 1px dotted #ddd0bc;
+            padding-bottom: 8px;
+        }
+        .status-active {
+            color: #2a4b74;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .status-expired {
+            color: #8b3a3a;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .cookie-value {
+            background: #e8dfd0;
+            padding: 10px;
+            font-weight: bold;
+            color: #3a2c1f;
+            margin: 10px 0;
+            border-left: 4px solid #b8a88a;
+        }
+        .timer {
+            font-size: 12px;
+            color: #8b775a;
+            margin-top: 10px;
+        }
+        .reset-btn {
             background: #e8dfd0;
             border: 1px solid #b8a88a;
-            padding: 12px 28px;
+            padding: 10px 20px;
             font-family: 'Courier New', monospace;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
             color: #3a2c1f;
             cursor: pointer;
             transition: all 0.2s ease;
-            box-shadow: 2px 2px 0 rgba(100, 70, 40, 0.15);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
         }
-        .submit-btn:hover {
+        .reset-btn:hover {
             background: #ddd0bb;
             transform: translate(-1px, -1px);
-            box-shadow: 3px 3px 0 rgba(100, 70, 40, 0.2);
         }
-        .submit-btn:active {
-            transform: translate(1px, 1px);
-            box-shadow: 1px 1px 0 rgba(100, 70, 40, 0.15);
+        .footer-card {
+            background: #e8dfd0;
+            border: 1px solid #b8a88a;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #3a2c1f;
         }
     </style>
 </head>
@@ -45,65 +105,71 @@ if(isset($_POST['submit'])) {
 
 <div class="main-card">
     <h1>Personal Information with Cookies</h1>
-    <div class="subtitle">First Name (10s) | Middle Name (20s) | Last Name (30s)</div>
+    <div class="subtitle">First name (10s) | Middle name (20s) | Last name (30s)</div>
+    <div class="desc">Cookies are set automatically when page loads</div>
 
-    <form method="post">
-        <div style="text-align: left; margin: 20px 0;">
-            <label style="display:block; margin:8px 0 2px;">First Name:</label>
-            <input type="text" name="firstname" required style="width:100%; padding:8px; font-family:inherit;">
+    <div class="cookie-slot">
+        <div class="cookie-title">FIRST NAME COOKIE</div>
+        <?php
+        if (isset($_COOKIE['firstname'])) {
+            $remaining = 10 - $elapsed;
+            if ($remaining < 0) $remaining = 0;
+            echo "
+                <div class='status-active'>✓ ACTIVE</div>
+                <div class='cookie-value'>" . $_COOKIE['firstname'] . "</div>
+                <div class='timer'>Expires in $remaining second(s)</div>
+            ";
+        } else {
+            echo "
+                <div class='status-expired'>✗ EXPIRED AFTER 10 SECONDS</div>
+            ";
+        }
+        ?>
+    </div>
 
-            <label style="display:block; margin:8px 0 2px;">Middle Name:</label>
-            <input type="text" name="middlename" required style="width:100%; padding:8px; font-family:inherit;">
+    <div class="cookie-slot">
+        <div class="cookie-title">MIDDLE NAME COOKIE</div>
+        <?php
+        if (isset($_COOKIE['middlename'])) {
+            $remaining = 20 - $elapsed;
+            if ($remaining < 0) $remaining = 0;
+            echo "
+                <div class='status-active'>✓ ACTIVE</div>
+                <div class='cookie-value'>" . $_COOKIE['middlename'] . "</div>
+                <div class='timer'>Expires in $remaining second(s)</div>
+            ";
+        } else {
+            echo "
+                <div class='status-expired'>✗ EXPIRED AFTER 20 SECONDS</div>
+            ";
+        }
+        ?>
+    </div>
 
-            <label style="display:block; margin:8px 0 2px;">Last Name:</label>
-            <input type="text" name="lastname" required style="width:100%; padding:8px; font-family:inherit;">
-        </div>
-        
-        <div style="text-align: center;">
-            <button type="submit" name="submit" class="submit-btn">
-                Set Cookies
-            </button>
-        </div>
-    </form>
+    <div class="cookie-slot">
+        <div class="cookie-title">LAST NAME COOKIE</div>
+        <?php
+        if (isset($_COOKIE['lastname'])) {
+            $remaining = 30 - $elapsed;
+            if ($remaining < 0) $remaining = 0;
+            echo "
+                <div class='status-active'>✓ ACTIVE</div>
+                <div class='cookie-value'>" . $_COOKIE['lastname'] . "</div>
+                <div class='timer'>Expires in $remaining second(s)</div>
+            ";
+        } else {
+            echo "
+                <div class='status-expired'>✗ EXPIRED AFTER 30 SECONDS</div>
+            ";
+        }
+        ?>
+    </div>
 
-    <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #ddd0bc; text-align: left;">
-        <h3 style="font-size: 18px; margin-bottom: 10px;">Cookie Values:</h3>
-        
-        <p><strong>First Name:</strong> 
-            <?php 
-            if(isset($_COOKIE['firstname'])) {
-                echo $_COOKIE['firstname'];
-            } else {
-                echo "expired";
-            }
-            ?>
-        </p>
-        <p><strong>Middle Name:</strong> 
-            <?php 
-            if(isset($_COOKIE['middlename'])) {
-                echo $_COOKIE['middlename'];
-            } else {
-                echo "expired";
-            }
-            ?>
-        </p>
-        <p><strong>Last Name:</strong> 
-            <?php 
-            if(isset($_COOKIE['lastname'])) {
-                echo $_COOKIE['lastname'];
-            } else {
-                echo "expired";
-            }
-            ?>
-        </p>
-        
-        <div class="note" style="font-size:12px; color:#8b775a; margin-top:15px; background:#f7f3ea; padding:10px;">
-            <strong>Cookie Expiration:</strong><br>
-            - After 10 seconds: First name shows "expired"<br>
-            - After 20 seconds: Middle name shows "expired"<br>
-            - After 30 seconds: Last name shows "expired"<br>
-            - Click submit, then wait and refresh to see "expired"
-        </div>
+    <div class="footer-card">
+        <strong>COOKIE TIMER STATUS</strong><br><br>
+        First Name Cookie → 10 Seconds<br>
+        Middle Name Cookie → 20 Seconds<br>
+        Last Name Cookie → 30 Seconds
     </div>
 
     <div class="footer" style="margin-top: 25px;">
