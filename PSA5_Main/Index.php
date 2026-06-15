@@ -1,6 +1,4 @@
-<?php
-// Main page for PSA5 - PHP Web Forms and Form Validation
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
