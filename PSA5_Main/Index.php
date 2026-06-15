@@ -18,19 +18,19 @@
     
     <div class="button-group">
         <a href="Personal_Information_Get_Method.php" class="project-btn">
-            <span>📥 Personal Info – GET method</span>
+            <span>Personal Info – $_GET method</span>
             <span>→</span>
         </a>
         <a href="Personal_Information_Post_Method.php" class="project-btn">
-            <span>📤 Personal Info – POST method</span>
+            <span>Personal Info – $_POST method</span>
             <span>→</span>
         </a>
-        <a href="personal_cookies.php" class="project-btn">
-            <span>🍪 Personal Info – Cookies (10/20/30 sec)</span>
+        <a href="Personal_Info_Cookies.php" class="project-btn">
+            <span>Personal Info – Cookies (10/20/30 sec)</span>
             <span>→</span>
         </a>
-        <a href="favorite_colors.php" class="project-btn">
-            <span>🎨 Favorite Colors – Session</span>
+        <a href="Favorite_Colors.php" class="project-btn">
+            <span>Favorite Colors – Session</span>
             <span>→</span>
         </a>
     </div>
