@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', 'Lucida Sans Typewriter', monospace;
+    background: #f0ebe0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-card {
+    max-width: 620px;
+    width: 100%;
+    background: #fffef7;
+    border: 1px solid #ccc5b5;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.logo-icon {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.logo-icon img {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #3a2c1f;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.desc {
+    color: #2a4b74;
+    font-weight: 500;
+    font-size: 13px;
+    margin: 12px 0 25px 0;
+    background: #f7f3ea;
+    display: inline-block;
+    padding: 4px 16px;
+    border: 1px dotted #ddd0bc;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin: 20px 0 20px 0;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: #e8dfd0;
+    border: 1px solid #b8a88a;
+    padding: 14px 28px;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    font-weight: bold;
+    color: #3a2c1f;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 0 rgba(100, 70, 40, 0.15);
+    width: 100%;
+    max-width: 400px;
+    min-width: 280px;
+}
+
+.project-btn span:first-child {
+    text-align: left;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-btn span:last-child {
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+/* Button Icon Styles */
+.btn-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+@media (max-width: 480px) {
+    .project-btn {
+        max-width: 300px;
+        min-width: 260px;
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .main-card {
+        padding: 1.8rem 1.2rem;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .logo-icon img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .btn-icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+    .project-btn {
+        max-width: 350px;
+        min-width: 280px;
+    }
+}
+
+.project-btn:hover {
+    background: #ddd0bb;
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 rgba(100, 70, 40, 0.2);
+}
+
+.project-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 rgba(100, 70, 40, 0.15);
+}
+
+/* Register Button - Dark Earthy Brown */
+.project-btn.register-btn {
+    background: #5a4a34;
+    border-color: #3a2c1f;
+    color: #f0ebe0;
+}
+
+.project-btn.register-btn:hover {
+    background: #3a2c1f;
+    border-color: #2a1c0f;
+    color: #fffef7;
+}
+
+/* View Button - Warm Beige */
+.project-btn.view-btn {
+    background: #e8dfd0;
+    border-color: #b8a88a;
+    color: #3a2c1f;
+}
+
+.project-btn.view-btn:hover {
+    background: #ddd0bb;
+    border-color: #a89878;
+}
+
+.footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e2d8c8;
+    font-size: 11px;
+    color: #8b775a;
+}
+
+.footer .student-id {
+    color: #5a4a34;
+    font-weight: bold;
+}
+
+.divider-line {
+    width: 60px;
+    height: 1px;
+    background: #ddd0bc;
+    margin: 12px auto;
+}

@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', 'Lucida Sans Typewriter', monospace;
+    background: #f0ebe0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-card {
+    max-width: 1200px;
+    width: 100%;
+    background: #fffef7;
+    border: 1px solid #ccc5b5;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+/* Top Navigation - Back Button on Top Left */
+.top-nav {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.back-btn {
+    display: inline-block;
+    background: #e8dfd0;
+    border: 1px solid #b8a88a;
+    padding: 8px 18px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: bold;
+    color: #3a2c1f;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 0 rgba(100, 70, 40, 0.15);
+}
+
+.back-btn:hover {
+    background: #ddd0bb;
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 rgba(100, 70, 40, 0.2);
+}
+
+.back-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 rgba(100, 70, 40, 0.15);
+}
+
+.logo-icon {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.logo-icon svg {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #3a2c1f;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: #5a4a34;
+    font-size: 13px;
+    margin: 5px 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #ddd0bc;
+    display: inline-block;
+}
+
+.divider-line {
+    width: 60px;
+    height: 1px;
+    background: #ddd0bc;
+    margin: 12px auto;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 15px 0 20px 0;
+}
+
+/* Stats Section - FIXED ALIGNMENT */
+.stats {
+    font-size: 14px;
+    color: #5a4a34;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1;
+}
+
+.stats svg {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.stats strong {
+    color: #3a2c1f;
+}
+
+/* Add Button */
+.add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #5a4a34;
+    border: 1px solid #3a2c1f;
+    padding: 10px 22px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f0ebe0;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 0 rgba(100, 70, 40, 0.15);
+    line-height: 1;
+}
+
+.add-btn:hover {
+    background: #3a2c1f;
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 rgba(100, 70, 40, 0.2);
+}
+
+.add-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 rgba(100, 70, 40, 0.15);
+}
+
+.add-btn svg {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.add-btn .arrow {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: left;
+}
+
+table thead {
+    background: #e8dfd0;
+    border-bottom: 2px solid #b8a88a;
+}
+
+table th {
+    padding: 12px 10px;
+    font-weight: bold;
+    color: #3a2c1f;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #e2d8c8;
+    color: #3a2c1f;
+}
+
+table tbody tr:hover {
+    background: #f7f3ea;
+}
+
+.empty-message {
+    padding: 50px 20px;
+    color: #8b775a;
+    font-size: 16px;
+}
+
+.empty-message a {
+    color: #2a4b74;
+    text-decoration: none;
+    border-bottom: 1px dotted #2a4b74;
+}
+
+.empty-message a:hover {
+    color: #1a3a5a;
+}
+
+.footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e2d8c8;
+    font-size: 12px;
+    color: #8b775a;
+}
+
+@media (max-width: 768px) {
+    .main-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .header-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add-btn {
+        justify-content: center;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    table {
+        font-size: 11px;
+    }
+
+    table th,
+    table td {
+        padding: 8px 6px;
+    }
+
+    .top-nav {
+        margin-bottom: 10px;
+    }
+
+    .back-btn {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-card {
+        padding: 1rem 0.8rem;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .logo-icon svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    table {
+        font-size: 10px;
+    }
+
+    table th,
+    table td {
+        padding: 6px 4px;
+    }
+
+    .add-btn {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .add-btn svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .stats svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .back-btn {
+        font-size: 11px;
+        padding: 5px 12px;
+    }
+}
