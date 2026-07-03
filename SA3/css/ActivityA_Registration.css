@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', 'Lucida Sans Typewriter', monospace;
+    background: #f0ebe0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-card {
+    width: 100%;
+    max-width: 650px;
+    background: #fffef7;
+    border: 1px solid #ccc5b5;
+    padding: 2.5rem 2rem;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, .05);
+}
+
+.logo-icon {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+h1 {
+    text-align: center;
+    color: #3a2c1f;
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #5a4a34;
+    font-size: 13px;
+    border-bottom: 1px dotted #ddd0bc;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+}
+
+/* ==========================
+   Message Box
+========================== */
+
+.message {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc5b5;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.message.error {
+    background: #f0e0e0;
+    border-color: #b88a8a;
+    color: #4b2a2a;
+}
+
+/* ==========================
+   Form
+========================== */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #3a2c1f;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    border: 1px solid #ccc5b5;
+    background: #fcfaf5;
+    color: #3a2c1f;
+    transition: .2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #8b775a;
+    background: #fffef7;
+}
+
+.form-group input::placeholder {
+    color: #b8a88a;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.project-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 170px;
+    padding: 12px 20px;
+    text-decoration: none;
+    border: 1px solid #b8a88a;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 2px 2px 0 rgba(100, 70, 40, .15);
+}
+
+.project-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 rgba(100, 70, 40, .20);
+}
+
+.save-btn {
+    background: #5a4a34;
+    border-color: #3a2c1f;
+    color: #f0ebe0;
+}
+
+.save-btn:hover {
+    background: #3a2c1f;
+}
+
+.back-btn {
+    background: #e8dfd0;
+    color: #3a2c1f;
+}
+
+.back-btn:hover {
+    background: #ddd0bb;
+}
+
+/* ==========================
+   Result Card
+========================== */
+
+.result-card {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f7f3ea;
+    border: 1px solid #ddd0bc;
+    border-left: 5px solid #5a4a34;
+}
+
+.result-card h2 {
+    color: #3a2c1f;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.result-card p {
+    margin-bottom: 10px;
+    color: #3a2c1f;
+    line-height: 1.7;
+    word-break: break-word;
+}
+
+.result-card strong {
+    color: #5a4a34;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:600px) {
+
+    .main-card {
+        padding: 1.8rem 1.3rem;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .logo-icon svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .project-btn {
+        width: 100%;
+        min-width: auto;
+    }
+
+}
